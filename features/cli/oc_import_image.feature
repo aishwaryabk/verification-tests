@@ -22,7 +22,7 @@ Feature: oc import-image related feature
 
   # @author wjiang@redhat.com
   # @case_id OCP-12052
-  @smoke
+  @smoke @ppc64le
   @inactive
   Scenario: OCP-12052:ImageRegistry Import image when spec.DockerImageRepository with some tags defined when Kind==DockerImage
     Given I have a project

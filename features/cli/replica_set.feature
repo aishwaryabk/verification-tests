@@ -2,7 +2,7 @@ Feature: replicaSet related tests
 
   # @author pruan@redhat.com
   # @case_id OCP-10917
-  @smoke
+  @smoke @ppc64le
   Scenario: OCP-10917:Workloads Support endpoints of RS in OpenShift
     Given I have a project
     Given I obtain test data file "replicaSet/ocp10917/rs_endpoints.yaml"

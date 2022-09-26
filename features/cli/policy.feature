@@ -286,7 +286,7 @@ Feature: change the policy of user/service account
   # @author chaoyang@redhat.com
   # @case_id OCP-10466
   @admin
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @aws-ipi
   @aws-upi

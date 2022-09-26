@@ -56,7 +56,7 @@ Feature: storageClass related feature
   # @author lxia@redhat.com
   # @author chaoyang@redhat.com
   @admin
-  @smoke
+  @smoke @ppc64le
   @upgrade-sanity
   @singlenode
   @proxy @noproxy @disconnected @connected
@@ -322,7 +322,7 @@ Feature: storageClass related feature
 
   # @author chaoyang@redhat.com
   # @case_id OCP-10228
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @aws-ipi
   @aws-upi

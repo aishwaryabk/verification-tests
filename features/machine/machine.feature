@@ -2,7 +2,7 @@ Feature: Machine features testing
 
   # @author jhou@redhat.com
   # @case_id OCP-21196
-  @smoke
+  @smoke @ppc64le
   @admin
   @osd_ccs @aro @rosa
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
@@ -18,7 +18,7 @@ Feature: Machine features testing
 
   # @author jhou@redhat.com
   # @case_id OCP-22115
-  @smoke
+  @smoke @ppc64le
   @admin
   @aro
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6

@@ -2,7 +2,7 @@ Feature: configMap
 
   # @author chezhang@redhat.com
   # @case_id OCP-10805
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -43,7 +43,7 @@ Feature: configMap
 
   # @author chezhang@redhat.com
   # @case_id OCP-11255
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -141,7 +141,7 @@ Feature: configMap
 
   # @author chezhang@redhat.com
   # @case_id OCP-9882
-  @smoke
+  @smoke @ppc64le
   @inactive
   Scenario: OCP-9882:Node Set command-line arguments with ConfigMap
     Given I have a project
@@ -210,7 +210,7 @@ Feature: configMap
 
   # @author chezhang@redhat.com
   # @case_id OCP-9880
-  @smoke
+  @smoke @ppc64le
   @inactive
   Scenario: OCP-9880:Node Create ConfigMap from file
     Given I have a project

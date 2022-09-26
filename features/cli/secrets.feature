@@ -35,7 +35,7 @@ Feature: secrets related scenarios
 
   # @author qwang@redhat.com
   # @case_id OCP-12281
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -188,7 +188,7 @@ Feature: secrets related scenarios
 
   # @author chezhang@redhat.com
   # @case_id OCP-10814
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -246,7 +246,7 @@ Feature: secrets related scenarios
 
   # @author chezhang@redhat.com
   # @case_id OCP-11260
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -280,7 +280,7 @@ Feature: secrets related scenarios
 
   # @author qwang@redhat.com
   # @case_id OCP-11311
-  @smoke
+  @smoke @ppc64le
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
   @network-ovnkubernetes @network-openshiftsdn

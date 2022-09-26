@@ -2,7 +2,7 @@ Feature: Testing route
 
   # @author hongli@redhat.com
   # @case_id OCP-12122
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -37,7 +37,7 @@ Feature: Testing route
 
   # @author hongli@redhat.com
   # @case_id OCP-10660
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -91,7 +91,7 @@ Feature: Testing route
 
   # @author hongli@redhat.com
   # @case_id OCP-12652
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -122,7 +122,7 @@ Feature: Testing route
 
   # @author hongli@redhat.com
   # @case_id OCP-12562
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -380,7 +380,7 @@ Feature: Testing route
 
   # @author hongli@redhat.com
   # @case_id OCP-10024
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi

@@ -40,7 +40,7 @@ Feature: deployment related features
 
   # @author xxing@redhat.com
   # @case_id OCP-10643
-  @smoke
+  @smoke @ppc64le
   @4.12 @4.11 @4.10 @4.9 @4.8 @4.7 @4.6
   @vsphere-ipi @openstack-ipi @gcp-ipi @baremetal-ipi @azure-ipi @aws-ipi
   @vsphere-upi @openstack-upi @gcp-upi @baremetal-upi @azure-upi @aws-upi
@@ -836,7 +836,7 @@ Feature: deployment related features
 
   # @author yinzhou@redhat.com
   # @case_id OCP-11326
-  @smoke
+  @smoke @ppc64le
   @inactive
   Scenario: OCP-11326:Workloads Support verbs of Deployment in OpenShift
     Given I have a project

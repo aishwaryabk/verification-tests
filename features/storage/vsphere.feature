@@ -2,7 +2,7 @@ Feature: vSphere test scenarios
 
   # @author jhou@redhat.com
   @admin
-  @smoke
+  @smoke 
   @upgrade-sanity
   @singlenode
   @proxy @noproxy @disconnected @connected

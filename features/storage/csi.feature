@@ -93,7 +93,7 @@ Feature: CSI testing related feature
 
   # @author wduan@redhat.com
   @admin
-  @smoke
+  @smoke 
   @upgrade-sanity
   @qeci
   @singlenode
@@ -178,7 +178,7 @@ Feature: CSI testing related feature
 
   # @author wduan@redhat.com
   @admin
-  @smoke
+  @smoke 
   @upgrade-sanity
   @qeci
   @singlenode
