@@ -217,14 +217,16 @@ Feature: oc idle
       | idling.*openshift.io/idled-at |
     Given I use the "idling-echo" service
     And evaluation of `service.ip(user: user)` is stored in the :service_ip clipboard
-    Given I obtain test data file "routing/caddy-docker.json"
+    Given I obtain test data file "routing/web-server-1.yaml"
     When I run the :create client command with:
-      | f | caddy-docker.json |
+      | f | web-server-1.yaml |
     Then the step should succeed
-    And the pod named "caddy-docker" becomes ready
+    And the pod named "web-server-1" becomes ready
     When I run the :exec client command with:
-      | pod              | caddy-docker              |
+      | pod              | web-server-1              |
+      | exec_command     | --                        |
       | exec_command     | curl                      |
+      | exec_command_arg | --http0.9                 |
       | exec_command_arg | <%= cb.service_ip %>:8675 |
       | _timeout         | 60                        |
     Then the output should match "GET.*HTTP"
@@ -241,7 +243,7 @@ Feature: oc idle
     Then the step should succeed
     And I wait until number of replicas match "0" for replicationController "idling-echo-1"
     And I run the :exec client command with:
-      | pod              | caddy-docker                                  |
+      | pod              | web-server-1                                  |
       | oc_opts_end      |                                               |
       | exec_command     | sh                                            |
       | exec_command_arg | -c                                            |
@@ -287,18 +289,18 @@ Feature: oc idle
       | idling.*openshift.io/idled-at |
     Given I use the "hello-svc" service
     And evaluation of `service.ip(user: user)` is stored in the :service_ip clipboard
-    Given I obtain test data file "routing/caddy-docker.json"
+    Given I obtain test data file "routing/web-server-1.yaml"
     When I run the :create client command with:
-      | f | caddy-docker.json |
+      | f | web-server-1.yaml |
     Then the step should succeed
-    And the pod named "caddy-docker" becomes ready
+    And the pod named "web-server-1" becomes ready
     And I wait up to 60 seconds for the steps to pass:
     """
     When I execute on the pod:
       | curl | --max-time | 60 | <%= cb.service_ip %>:8000 |
-    Then the output should contain "Hello Pod!"
+    Then the output should contain "Hello OpenShift!"
     """
-    Given I ensure "caddy-docker" pod is deleted
+    Given I ensure "web-server-1" pod is deleted
     Given I wait until number of replicas match "2" for replicationController "hello-pod"
     When I run the :get client command with:
       | resource | endpoints |

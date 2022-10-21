@@ -200,6 +200,7 @@
     :generator: --generator=<value>
     :image: --image=<value>
     :output: --output <value>
+    :replicas: --replicas <value>
     :save_config: --save-config=<value>
     :template: --template=<value>
     :validate: --validate=<value>

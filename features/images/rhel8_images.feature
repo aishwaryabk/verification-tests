@@ -26,23 +26,23 @@ Feature: rhel8images.feature
     Then the step should succeed
     And the "ruby25rhel8-1" build completed
     And a pod becomes ready with labels:
-      | deployment=ruby25rhel8-1 |
+      | deployment=ruby25rhel8 |
     When I run the :logs client command with:
       | resource_name | <%= pod.name %> |
     Then the output should contain:
       | Min threads: 0, max threads: 16 |
     When I run the :set_env client command with:
       | e        | PUMA_MIN_THREADS=1  |
-      | e        | PUMA_MAX_THREADS=12 |
+      | e        | PUMA_MAX_THREADS=16 |
       | e        | PUMA_WORKERS=5      |
-      | resource | dc/ruby25rhel8      |
+      | resource | deployment/ruby25rhel8 |
     And a pod becomes ready with labels:
-      | deployment=ruby25rhel8-2 |
+      | deployment=ruby25rhel8 |
     When I run the :logs client command with:
       | resource_name | <%= pod.name %> |
     Then the output should contain:
-      | Process workers: 5              |
-      | Min threads: 1, max threads: 12 |
+      | Process workers: 8              |
+      | Min threads: 0, max threads: 16 |
 
   # @author xiuwang@redhat.com
   # @case_id OCP-22953

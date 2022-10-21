@@ -32,9 +32,9 @@ Feature: Event related scenarios
       | pods\\s+0\\s+10                   |
       | replicationcontrollers\\s+0\\s+20 |
       | resourcequotas\\s+1\\s+1          |
-      | secrets\\s+9\\s+10                |
+      | secrets\\s+6\\s+10                |
       | services\\s+0\\s+5                |
-    When I run the :run client command with:
+    When I run the :create_deployment client command with:
       | name      | nginx   |
       | image     | nginx   |
       | replicas  | 1       |

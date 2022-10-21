@@ -7,7 +7,7 @@ Feature: scaling related scenarios
   Scenario: OCP-10626:ImageRegistry Scale replicas via replicationcontrollers and deploymentconfig
     Given I have a project
     And I create a new application with:
-      | image_stream | openshift/perl:5.26                          |
+      | image_stream | openshift/perl:5.26-ubi8                     |
       | name         | myapp                                        |
       | code         | https://github.com/sclorg/s2i-perl-container |
       | context_dir  | 5.26/test/sample-test-app/                   |
@@ -17,33 +17,33 @@ Feature: scaling related scenarios
     When I expose the "myapp" service
     Then the step should succeed
     Given I wait for the "myapp" service to become ready up to 300 seconds
-    When I get project replicationcontroller as JSON
+    When I get project replicaset as JSON
     And evaluation of `@result[:parsed]['items'][0]['metadata']['name']` is stored in the :rc_name clipboard
     # get dc name
-    When I get project deploymentconfig as JSON
+    When I get project deployment as JSON
     And evaluation of `@result[:parsed]['items'][0]['metadata']['name']` is stored in the :dc_name clipboard
     Then I run the :scale client command with:
-      | resource | deploymentconfig  |
+      | resource | deployment        |
       | name     | <%= cb.dc_name %> |
       | replicas | 3                 |
     Then the step should succeed
-    And I wait until number of replicas match "3" for replicationController "<%= cb.rc_name %>"
+    And I wait until number of replicas match "3" for replicaSet "<%= cb.rc_name %>"
     # scale down
     Then I run the :scale client command with:
-      | resource | deploymentconfig  |
+      | resource | deployment        |
       | name     | <%= cb.dc_name %> |
       | replicas | 2                 |
     Then the step should succeed
-    And I wait until number of replicas match "2" for replicationController "<%= cb.rc_name %>"
+    And I wait until number of replicas match "2" for replicaSet "<%= cb.rc_name %>"
     Then I run the :scale client command with:
-      | resource | deploymentconfig  |
+      | resource | deployment        |
       | name     | <%= cb.dc_name %> |
       | replicas | 0                 |
     Then the step should succeed
-    And I wait until number of replicas match "0" for replicationController "<%= cb.rc_name %>"
+    And I wait until number of replicas match "0" for replicaSet "<%= cb.rc_name %>"
 
     Then I run the :scale client command with:
-      | resource | deploymentconfig  |
+      | resource | deployment        |
       | name     | <%= cb.dc_name %> |
       | replicas | -3                |
     Then the step should fail
